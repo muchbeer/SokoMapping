@@ -1,5 +1,6 @@
 package sokohuru.muchbeer.king.sokomapping;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 /**
@@ -14,10 +16,21 @@ import android.widget.Toast;
  */
 public class NewPage extends AppCompatActivity {
 
+    Button dbSql;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newpage);
+
+        dbSql = (Button)findViewById(R.id.btSql);
+
+        dbSql.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dataSql = new Intent(getApplicationContext(), Dsql.class);
+                startActivity(dataSql);
+            }
+        });
 
         //Floating action
         FloatingActionButton fabBtn = (FloatingActionButton) findViewById(R.id.btnFloatingAction);

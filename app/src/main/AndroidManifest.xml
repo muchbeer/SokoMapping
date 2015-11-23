@@ -28,6 +28,17 @@
                 android:value="sokohuru.muchbeer.king.sokomapping.MainActivity" />
 
         </activity>
+
+        <activity
+            android:name=".Dsql"
+            android:label="@string/app_name"
+            android:parentActivityName="sokohuru.muchbeer.king.sokomapping.MainActivity">
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sokohuru.muchbeer.king.sokomapping.MainActivity" />
+
+        </activity>
     </application>
 
 </manifest>
