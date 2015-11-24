@@ -1,9 +1,12 @@
 package sokohuru.muchbeer.king.sokomapping;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.graphics.Color;
+
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_pane);
+
+        /*
 
         _loginButton=(Button)findViewById(R.id.btn_signup);
         passwordText=(EditText)findViewById(R.id.input_password);
@@ -67,6 +72,16 @@ public class MainActivity extends AppCompatActivity {
                  }
              }
         });
+
+*/
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        Open_Fragment ls_fragment = new Open_Fragment();
+        fragmentTransaction.replace(android.R.id.content, ls_fragment);
+
+        fragmentTransaction.commit();
+
     }
 
     @Override
