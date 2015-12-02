@@ -54,7 +54,7 @@ public class Dsql extends AppCompatActivity implements View.OnClickListener {
         // TODO Auto-generated method stub
         String value = "";
         for(StudentsModel sm : list){
-            value = value+"id: "+sm.id+", name: "+sm.name+" Ph_no: "+sm.phone_number+"\n";
+            value = value+"Id:> "+sm.id+", Name:> "+sm.name+" Ph_no:> "+sm.phone_number+"\n";
         }
         tv.setText(value);
     }

@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_pane);
+        setContentView(R.layout.activity_main);
 
-        /*
+
 
         _loginButton=(Button)findViewById(R.id.btn_signup);
         passwordText=(EditText)findViewById(R.id.input_password);
@@ -73,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
              }
         });
 
-*/
+
+
+        /*
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentTransaction.commit();
 
+*/
     }
 
     @Override
